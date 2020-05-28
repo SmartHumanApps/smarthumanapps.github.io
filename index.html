@@ -1,0 +1,35 @@
+---
+title: SmartHumanApps
+---
+
+<section class="hero diagonal">
+    <div class="container">
+        <h2 class="editable">Apps for smart people</h2>
+        <p class="subtext editable">
+            Because <strong>You</strong>'re Worth It.
+        </p>
+    </div>
+</section>
+
+<section class="diagonal patterned">
+    <div class="container halves">
+        <div>
+            <h3 class="editable">Some of our work</h3>
+            <p class="editable">
+                Our mission is to deliver highly reliable and beautifully designed <strong>useful</strong> apps.
+            </p>
+            <p class="editable"><a href="{{ site.baseurl }}/products/">
+                See more &rarr;
+            </a></p>
+        </div>
+        <div>
+            <ul class="image-grid">
+                {% for product in site.products limit: 4 %}
+                <li><a href="{{ site.baseurl }}{{ product.url }}"><img
+                        src="{% include relative-src.html src=product.image_path %}"></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
