@@ -1,0 +1,25 @@
+---
+title: Products
+heading: Products
+subtitle: Discover the details of what we've made
+---
+
+<section class="diagonal patterned">
+	<div class="container">
+		<ul class="image-grid">
+			{% for product in site.products %}
+				<li>
+					<a href="{{ site.baseurl }}{{ product.url }}">
+						<img src="{% include relative-src.html src=product.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ product.name }}</div>
+							<div class="position">{{ product.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+	</div>
+</section>

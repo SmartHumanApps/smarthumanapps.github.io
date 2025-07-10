@@ -1,0 +1,101 @@
+title: SmartHumanApps
+url: "https://smarthumanapps.github.io"
+#If your Jekyll site is hosted on GitHub Pages at https://smarthumanapps.github.io, set:
+baseurl: ""  # No trailing slash
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
+
+# Default description in social shares for the jekyll-seo-tag gem
+description: Making phones smarter.
+
+# Author details for the jekyll-seo-tag gem
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
+
+# Social details for the jekyll-seo-tag gem
+social:
+  name: Smart Human Apps
+  links:
+    - https://smarthumanapps.github.io
+
+timezone: Etc/UTC
+
+collections:
+  staff_members:
+    output: false
+  products:
+    output: true
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - "categories"
+
+plugins:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-archives"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 960
+          height: 2000
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+      _options:
+        image_path:
+          width: 2000
+          height: 2000
+  - scope:
+      path: ""
+      type: "staff_members"
+    values:
+      _options:
+        image_path:
+          width: 600
+          height: 600
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "default"
+
+# -----------
+# SmartHumanApps
+
+social_icons:
+  - Facebook
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
